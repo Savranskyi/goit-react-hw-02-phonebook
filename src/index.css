@@ -26,3 +26,9 @@ li {
   font-size: 1.1em;
   align-items: baseline;
 }
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center !important;
+}

@@ -1,16 +1,23 @@
 import PropTypes from 'prop-types';
-import { Text, Input } from './Filter.styled';
-// import { Text } from './Filter.styled';
+import s from './Filter.module.css';
 
-export function Filter({ onChange }) {
+export function Filter({ value, onChange }) {
   return (
-    <>
-      <Text>Find contacts by name</Text>
-      <Input type="text" onChange={onChange} />
-    </>
+    <form className={s.filter}>
+      <label className={s.filterLabel}>
+        <span className={s.filterTitle}>Filter</span>
+        <input
+          className={s.filterInput}
+          type="text"
+          onChange={onChange}
+          value={value}
+        />
+      </label>
+    </form>
   );
 }
 
 Filter.propTypes = {
   onChange: PropTypes.func,
+  value: PropTypes.string,
 };
